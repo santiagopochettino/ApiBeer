@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Form with fetch</title>
+  </head>
+  <body>
+    <section id="section1" class="section">
+      <h2>PUNK API</h2>
+      <form id="beerSearch" class="contact-form">
+        <legend class="legend">Search your favorite beer</legend>
+        <input
+          type="text"
+          name="name"
+          placeholder="Write your beer"
+          title="Name only accepts letters and blanks"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+          required
+        />
+
+        <input type="submit" value="Search!" />
+        <div class="contact-from-loader none">
+          <img
+            src="./SVG-Loaders-master/svg-loaders/oval.svg"
+            alt="Loading..."
+          />
+        </div>
+        <div class="contact-form-response none">
+          <p>The data has been sent</p>
+        </div>
+      </form>
+
+      <div>
+        <table id="results"></table>
+      </div>
+    </section>
+
+    <script src="api.js"></script>
+    <script src="validations_form.js"></script>
+    <script src="index_dom.js"></script>
+  </body>
+</html>
